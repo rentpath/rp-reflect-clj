@@ -4,6 +4,8 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :scm {:url "git@github.com:rentpath/rp-reflect-clj.git"}
-  :deploy-repositories [["releases" :clojars]]
+  :deploy-repositories [["releases" {:url "https://clojars.org/repo/"
+                                     :username [:gpg :env/CLOJARS_USERNAME]
+                                     :password [:gpg :env/CLOJARS_PASSWORD]}]]
   :global-vars {*warn-on-reflection* true}
   :profiles {:dev {:dependencies [[org.clojure/clojure "1.8.0"]]}})
