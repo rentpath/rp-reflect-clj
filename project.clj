@@ -1,4 +1,4 @@
-(defproject com.rentpath/rp-reflect-clj "0.1.0"
+(defproject com.rentpath/rp-reflect-clj "0.1.1-SNAPSHOT"
   :description "Reflection helpers for Clojure's clojure.lang.Reflector class"
   :url "https://github.com/rentpath/rp-reflect"
   :license {:name "Eclipse Public License"
