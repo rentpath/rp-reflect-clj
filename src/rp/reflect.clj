@@ -25,7 +25,7 @@
   [^Class class ^String field-name]
   (Reflector/getStaticField class field-name))
 
-(defn invoke-instance-method
+(defn invoke-private-instance-method
   "Given a Java `instance`, a String method named `method-name`, a collection of `parameter-types`, and a collection of `args`, invoke the method of the given instance with those arguments."
   [^Object instance ^String method-name parameter-types & args]
   (let [^Method method (.. instance

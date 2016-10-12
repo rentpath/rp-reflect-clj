@@ -24,11 +24,11 @@
   (is (= 4
          (.getValue ^Month (get-static-field Month "APRIL")))))
 
-(deftest test-invoke-instance-method
+(deftest test-invoke-private-instance-method
   (is (= 2
-         (invoke-instance-method "piebald"
+         (invoke-private-instance-method "piebald"
                                  "indexOf"
                                  [Integer/TYPE]
                                  (int \e))))
   (is (= (str #"true|false")
-         (str (invoke-instance-method (java.util.Scanner. "") "boolPattern" [])))))
+         (str (invoke-private-instance-method (java.util.Scanner. "") "boolPattern" [])))))
