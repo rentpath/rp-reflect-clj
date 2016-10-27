@@ -23,3 +23,12 @@
          (get-static-field Long "MAX_VALUE")))
   (is (= 4
          (.getValue ^Month (get-static-field Month "APRIL")))))
+
+(deftest test-invoke-private-instance-method
+  (is (= 2
+         (invoke-private-instance-method "piebald"
+                                 "indexOf"
+                                 [Integer/TYPE]
+                                 (int \e))))
+  (is (= (str #"true|false")
+         (str (invoke-private-instance-method (java.util.Scanner. "") "boolPattern" [])))))
